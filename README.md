@@ -75,8 +75,8 @@ brew install python@3.11
 
 ### Clone & Install Dependencies
 ```bash
-git clone https://github.com/YOUR_USERNAME/yoga-pose-correction.git
-cd yoga-pose-correction
+git clone https://github.com/KalpeshM13/AI-Pose-Estimation-main.git
+cd AI-Pose-Estimation-main
 
 python3.11 -m pip install -r requirements.txt
 ```
