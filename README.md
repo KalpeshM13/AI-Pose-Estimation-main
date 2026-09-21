@@ -1,6 +1,6 @@
 # Yoga Pose Estimation & Correction Engine
 
-A real-time yoga pose correction system built with **MediaPipe** and **OpenCV** for the internship technical assignment. Detects and corrects **Urdhva Hastasana (Raised Hands Pose)** using rule-based logic on 33 body landmarks — no model training required.
+A real-time yoga pose correction system built with **MediaPipe** and **OpenCV** for the internship technical assignment. Detects and corrects multiple poses including **Urdhva Hastasana (Raised Hands Pose)** and **Virabhadrasana (Warrior) I, II, III** using rule-based logic on 33 body landmarks — no model training required. It features an **auto-detect** mode to automatically identify the pose you are performing.
 
 ---
 
@@ -26,10 +26,14 @@ The system gives real-time feedback on each condition, tracks breath hold timers
 - **Joint angle display** overlaid on skeleton
 - **Landmark coordinates** printed to screen and terminal
 - **Modular codebase** — clean separation of detection, correction, and UI
+- **Multiple Poses Supported** — Urdhva Hastasana, Warrior I, Warrior II, Warrior III
+- **Auto-Detection Mode** — automatically switches to the pose you are trying to perform
 
 ---
 
-## Pose Checks
+## Pose Checks (Urdhva Hastasana)
+
+Note: Similar rule-based checks exist for Warrior I, II, and III poses based on their specific physiological requirements.
 
 | # | Check | Method | Threshold |
 |---|-------|--------|-----------|
@@ -80,6 +84,15 @@ python3.11 -m pip install -r requirements.txt
 ### Run
 ```bash
 python3.11 main.py
+```
+
+You can customize the run with arguments:
+- `--pose`: Choose the pose to practice (`auto`, `urdhva`, `warrior1`, `warrior2`, `warrior3`). Default is `auto`.
+- `--cam`: Specify the camera index (e.g., `0` for built-in, `1` or `2` for external/phone cameras). Default is `0`.
+
+Example:
+```bash
+python3.11 main.py --pose warrior2 --cam 1
 ```
 
 > **Mac users:** Grant camera permission to Terminal via  
